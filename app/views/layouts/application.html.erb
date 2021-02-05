@@ -12,6 +12,11 @@
     <%= render 'layouts/header' %>
       <main>
         <p id="notice"><%= notice %></p>
+
+        <div class="mx-auto" style="width: 400px;">
+          <%= render 'searchs/form' %>
+        </div>
+
         <%= yield %>
       </main>
     <%= render 'layouts/footer' %>
