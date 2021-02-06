@@ -41,7 +41,7 @@
                     <td>
                         <%= attachment_image_tag(book.user, :profile_image, :fill, 50, 50, fallback: "no-image-icon.jpg") %>
                     </td>
-                    <td><%= link_to book.title, book_path(book) %>td>
+                    <td><%= link_to book.title, book_path(book) %></td>
                     <td><%= book.body %></td>
                 </tr>
             </tbody>
