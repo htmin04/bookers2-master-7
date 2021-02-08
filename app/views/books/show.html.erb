@@ -10,7 +10,13 @@
   		<h2>Book detail</h2>
   		<%= render 'show', book: @book %>
 
-      <%= render 'comment', book: @book, book_comment: @book_comment %>
+      <div id="comments_area">
+        <%= render partial: 'book_comments/index', locals: { book: @book, book_comments: @book_comments } %>
+      </div>
+      <% if user_signed_in? %>
+        <%= render partial: 'comment', locals: { book: @book, book_comment: @book_comment } %>
+      <% end %>
+
 
     </div>
   </div>
