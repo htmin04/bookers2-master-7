@@ -6,7 +6,6 @@ class BookCommentsController < ApplicationController
     @book_comment = @book.book_comments.build(book_comment_params)
     @book_comment.user_id = current_user.id
     @book_comment.save
-    @comments = @book.book_comments
     render :index
 
   end
